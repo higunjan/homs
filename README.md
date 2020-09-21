@@ -1,6 +1,6 @@
 # tbOMS Order Management System (HOMS)
 
-*HOMS* is an open source web application for order and business process management.
+*tbOMS* is an open source web application for order and business process management.
 
 Application consists of three parts:
 
