@@ -13,13 +13,6 @@ Requirements:
 * [Docker](https://docker.com/)
 * [docker-compose](https://docs.docker.com/compose/install/)
 
-Resources:
-
-* Documentation: [http://hydra-oms.com/docs](http://hydra-oms.com/docs)
-* Demo: [http://demo.hydra-oms.com](http://demo.hydra-oms.com)
-* Community: [http://community.hydra-oms.com](http://community.hydra-oms.com)
-* Tickets/Issues: [https://github.com/latera/homs/issues](https://github.com/latera/homs/issues)
-
 ## Installation
 
 The prefered way to install HOMS is to use [Docker](https://www.docker.com/).
@@ -29,8 +22,8 @@ The prefered way to install HOMS is to use [Docker](https://www.docker.com/).
 1. Download `docker-compose.yml` and default `.env` config file:
 
     ```bash
-    wget https://raw.githubusercontent.com/latera/homs/master/docker-compose.yml
-    wget https://raw.githubusercontent.com/latera/homs/master/.env.sample -O .env
+    wget https://raw.githubusercontent.com/higunjan/homs/master/docker-compose.yml
+    wget https://raw.githubusercontent.com/higunjan/homs/master/.env.sample -O .env
     ```
 
     :pushpin: All variables are set in `.env` file. There you can change them, if you want to.
