@@ -16,7 +16,6 @@ Requirements:
 ## Installation
 
 The prefered way to install HOMS is to use [Docker](https://www.docker.com/).
-
 ### In production
 
 1. Download `docker-compose.yml` and default `.env` config file:
