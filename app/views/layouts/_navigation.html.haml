@@ -1,0 +1,57 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle(data-target=".navbar-collapse" data-toggle="collapse" type="button")
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    .navbar-collapse
+      %ul.nav.navbar-nav
+        %li.logo
+          = link_to list_orders_url  do
+            = t('logo')
+            %img{src: image_path("logo.svg")}
+        - if user_signed_in?
+          %li
+            = link_to orders_path do
+              %span.fas.fa-list
+              = t('.orders')
+          - if current_user.admin?
+            %li
+              = link_to admin_order_types_path do
+                %span.fas.fa-cog
+                = t('.setup_order_types')
+            %li
+              = link_to users_path do
+                %span.fas.fa-users
+                = t('.users')
+          %li
+            = link_to tasks_path do
+              %span.fas.fa-tasks
+              = t('.tasks')
+      %ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          %li.dropdown
+            = link_to('#', class: 'dropdown-toggle', role: :button, 'data-toggle' => 'dropdown') do
+              %span.fas.fa-user
+              = current_user.name
+              %span.caret
+            %ul.dropdown-menu{role: :menu}
+              - link_to_manual = Rails.application.config.app.fetch(:link_to_manual, '')
+              - if link_to_manual.present?
+                %li
+                  %a(href="#{link_to_manual}")
+                    %span.fas.fa-question-circle
+                    = t('.help')
+              - if current_user.admin?
+                %li
+                  %a(href="#{Apitome.configuration.mount_at}")
+                    %span.fas.fa-info-circle
+                    = t('.rest_api')
+              %li
+                = link_to destroy_user_session_path, :method=>'delete' do
+                  %span.fas.fa-sign-out-alt
+                  = t('.sign_out')
+
+          %li#hbw-tasks-list-button

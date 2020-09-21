@@ -1,0 +1,19 @@
+hbw:
+  entities:
+    order:
+      entity_code_key: homsOrderCode
+      bp_name_key: homsProcessName
+
+      task_list:
+        entity_url: /orders/%s?task_id=%s
+        entity_url_params:
+          - homsOrderCode
+          - id
+
+      bp_toolbar:
+        common_buttons: []
+        entity_type_buttons: {}
+
+  allowed_request_origins:
+    - http://*
+    - https://*

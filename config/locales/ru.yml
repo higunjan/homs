@@ -1,0 +1,314 @@
+ru:
+  logo: tbOMS
+  hello: Привет, мир
+  add: Добавить
+  access_denied: Доступ запрещен
+  edit: Изменить
+  save: Сохранить
+  activate: Активировать
+  dismiss: Отклонить
+  user: Пользователь
+  user_updated: Пользователь обновлен
+  user_deleted: Пользователь удален
+  record_not_found: Запись не найдена
+  config:
+    bad_entity_url: Недопустимый параметр в entity_url '%{variable_name}'
+  custom_fields:
+    definition:
+      missing_attribute: Отсутствует атрибут '%{attribute_name}'
+      unknown_type: Неизвестный тип '%{type}'
+      invalid_type: Атрибут '%{attribute_name}' должен быть типа %{type}
+      undefined_field: Поле '%{field_name}' не описано в типе заказа
+      max_length: Длина атрибута '%{attribute_name}' не должна превышать %{max_length} символов
+      no_known_fields: Нет известных полей
+      invalid_value: Атрибут '%{attribute_name}' со значением '%{value}' должен быть типа %{type}
+      at_least: Атрибут '%{attribute_name}' должен иметь минимум %{min_value} значений в %{in}
+      not_in_set: Атрибут '%{attribute_name}' со значением '%{value}' должен иметь значение из списка %{set}
+      invalid: Атрибут '%{attribute_name}' имеет недопустимое значение '%{value}'
+      incorrect_format: У атрибута %{attribute_name} недопустимое значение %{value}. Неверный JSON.
+  devise:
+    passwords:
+      new:
+        title: Забыли пароль?
+        description: Мы вышлем вам письмо с инструкцией по сбросу пароля
+        submit: Сбросить пароль
+      edit:
+        title: Изменить пароль
+        new_password: Новый пароль
+        confirm_new_password: Повторите новый пароль
+        submit: Сохранить новый пароль
+    registrations:
+      new:
+        title: Зарегистрироваться
+        submit: Зарегистрироваться
+      edit:
+        title: Редактирование пользователя
+        leave_description: Оставьте эти поля пустыми, если не хотите менять пароль.
+        new_password: Новый пароль
+        currently_waiting: Ожидается подтверждение
+        current_password_description: Чтобы сохранить изменения, введите текущий пароль.
+        submit: Сохранить
+    sessions:
+      new:
+        title: Вход
+        sign_up: Зарегистрироваться
+        forgot_password: Забыли пароль?
+        remember_me: Запомнить меня
+        submit: Войти
+  helpers:
+    enter_state: Состояние заказа
+    enter_user: Пользователь
+    enter_order_type: Тип заказа
+    enter_archived: Архивный
+    creation_date: Дата создания
+    estimated_exec_date: Срок выполнения
+    from: с
+    to: по
+    yes_no:
+      'yes': Да
+      'no': Нет
+    custom_fields_filter:
+      title: Настраиваемые поля заказа
+      add: Фильтр по настраиваемым полям
+      placeholder: Выберите поле
+  users:
+    new:
+      title: Добавление пользователя
+    edit:
+      title: Профиль пользователя
+    index:
+      title: Пользователи
+    add:
+      added: Пользователь добавлен
+    show:
+      title: Профиль пользователя
+      generate_api_token: Создать API-токен
+      renew_api_token: Пересоздать API-токен
+      renew_api_token_warning: Новый API-токен заменит текущий. Продолжить?
+      clear_api_token: Удалить API-токен
+      clear_api_token_warning: Текущий API-токен будет удален. Продолжить?
+      yes_clear: Да, удалить
+      yes_renew: Да, пересоздать
+    empty: Не указан
+  orders:
+    new:
+      title: Добавление заказа
+      label: Тип заказа
+    states:
+      to_execute: Новый
+      in_progress: В обработке
+      done: Выполнен
+    search_by_not_found: Заказ не найден по запросу %{criteria}
+    index:
+      title: Заказы
+      archived: Архивирован
+      ext_code: Внешний код
+      no_orders_found: Заказов не найдено
+    search_form:
+      filter_records: Список заказов
+      search_for_record: Поиск заказа
+    search_by:
+      search: Найти
+      code: Код заказа
+      ext_code: Внешний код заказа
+    filter_by:
+      search: Найти
+      print: Напечатать
+    show:
+      order_data: Данные заказа
+      edit_title: Редактировать данные заказа
+      print_title: Напечатать данные заказа
+      empty_code_title: Для печати укажите код шаблона печатной формы в типе заказа
+    print: Напечатать
+    print_pdf: Напечатать в PDF
+    print_tasks:
+      started: Задание на печать %{print_task_id} выполняется. Проверьте вашу почту.
+      errors:
+        multiple_types: У выбранных заказов разные типы. Для печати выберите заказы одинакового типа.
+        internal_error: Печать не выполнена из-за внутренней ошибки.
+    total_items: 'Найдено заказов:'
+  user_role:
+    user: Пользователь
+    vip: Привилегированный пользователь
+    admin: Администратор
+  layouts:
+    navigation:
+      sign_in: Войти
+      sign_up: Зарегистрироваться
+      help: Справка
+      sign_out: Выйти
+      edit_account: Профиль
+      orders: Заказы
+      users: Пользователи
+      setup_order_types: Типы заказов
+      tasks: Задачи
+    form_errors:
+      errors:
+        one: 'Из-за %{count} ошибки учетная запись не сохранена:'
+        few: 'Из-за %{count} ошибок учетная запись не сохранена:'
+        many: 'Из-за %{count} ошибок учетная запись не сохранена:'
+        other: 'Из-за %{count} ошибок учетная запись не сохранена:'
+  admin:
+    order_types:
+      index:
+        title: Типы заказов
+        add: Загрузить тип заказов из YAML-файла
+        order_type_removal: Удалить тип заказов
+        confirmation: Вы действительно хотите удалить тип заказов «%{order_type}»? Удаление не повлияет на существующие заказы.
+        yes_remove: Да, удалить
+      show:
+        activate_dismiss: Активируйте тип заказов, если его определение корректно, или отклоните его
+        activated: Тип заказов активирован
+        back: Вернуться к списку
+      create:
+        uploaded: Тип заказов успешно загружен
+        equal_exists: Такой же тип заказов уже существует
+      dismiss:
+        dismissed: Тип заказов отклонен
+      activate:
+        activated: Тип заказов активирован
+      destroy:
+        destroyed: Тип заказов удален
+  tasks:
+    index:
+      title: Задачи
+  activerecord:
+    models:
+      user:
+        one: Пользователь
+        other: Пользователей
+      order_type:
+        one: Тип заказов
+        other: Типы заказов
+    attributes:
+      order:
+        code: Код
+        order_type_code: Тип заказа
+        ext_code: Внешний код
+        user: Пользователь
+        bp_id: Идентификатор бизнес-процесса
+        bp_state: Состояние бизнес-процесса
+        state: Состояние
+        done_at: Дата выполнения
+        archived: Архивирован
+        data: Настраиваемые поля
+        created_at: Дата создания
+        updated_at: Дата изменения
+        print_form_code: Код шаблона для печати
+        estimated_exec_date: Срок выполнения
+      order_type:
+        code: Код
+        file: Содержимое загруженного YAML файла
+        fields: Настраиваемые поля
+        active: Действует
+      user:
+        name: Имя
+        email: Электронная почта
+        role: Роль
+        middle_name: Отчество
+        last_name: Фамилия
+        full_name: Ф. И. О.
+        company: Компания
+        department: Отдел
+        api_token: API-токен
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        current_password: Текущий пароль
+    errors:
+      models:
+        order_type:
+          attributes:
+            base:
+              cannot_delete_as_orders_exist: Невозможно удалить, т. к. есть связанные заказы
+            file:
+              invalid: Ошибка при разборе файла
+        order:
+          attributes:
+            data:
+              fields_definition_invalid: 'Критическая ошибка: тип данного заказа содержит ошибки в настраиваемых полях. Пожалуйста, обратитесь к администратору.'
+        user:
+          blank: не указан
+          attributes:
+            email:
+              invalid: неверный
+              taken: уже используется
+            name:
+              blank: не указано
+            last_name:
+              blank: не указана
+            company:
+              blank: не указана
+            department:
+              blank: не указан
+            password:
+              blank: не задан
+              too_short: слишком короткий
+            password_confirmation:
+              confirmation: не заполнено
+  js:
+    cancel: Отменить
+    error: Ошибка
+    remove: Удалить
+    'yes': Да
+    not_selected: Не выбран
+    select2:
+      not_set: Не указан
+    user_not_found: Текущий пользователь не найден в Camunda
+    columns_settings: Отображаемые поля
+    from: с
+    to: по
+  doc:
+    common:
+      cases:
+        list: Список
+        show: Получить
+        create: Создать
+        update: Обновить
+        delete: Удалить
+      parameters:
+        default: По умолчанию
+        allowed_values: Допустимые значения
+        page_size: Элементов на странице
+        page: Текущая страница
+    orders:
+      resource: Заказы
+      cases:
+        update_data: Обновить настраиваемые поля
+        update_base_fields: Обновить основные поля
+        update_user_email: Обновить электронную почту пользователя
+      explanations:
+        update: Метод обновляет только переданные поля, остальные поля остаются без изменений.
+      parameters:
+        code: Код заказа
+        data: Настраиваемые поля
+        user_email: Электронная почта пользователя
+        order_type_code: Код типа заказа
+        ext_code: Внешний код заказа
+        bp_id: Идентификатор бизнес-процесса
+        bp_state: Состояние бизнес-процесса
+        state: Состояние заказа
+        done_at: Дата выполнения
+        estimated_exec_date: Срок выполнения
+        archived: Архивный
+    users:
+      resource: Пользователи
+      parameters:
+        email: Электронная почта
+        first_name: Имя
+        middle_name: Отчество
+        last_name: Фамилия
+        user_role: Роль пользователя
+        company: Название компании
+        department: Название отдела
+        password: Пароль
+        blocked: Заблокирован
+        external: Внешний
+        password_salt: Соль для пароля
+        encrypted_password: Зашифрованный пароль
+    profiles:
+      resource: Профили фильтрации
+      parameters:
+        id: Идентификатор профиля
+        data: Настраиваемые поля заказа
+        user_email: Электронная почта пользователя
+        order_type_code: Код типа заказов

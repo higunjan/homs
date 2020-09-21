@@ -1,0 +1,79 @@
+hbw:
+  entities:
+    order:
+      entity_code_key: homsOrderCode
+      bp_name_key: homsProcessName
+
+      bp_toolbar:
+        entity_type_buttons:
+          pizza_order:                              # Order type code
+            - name: 'Process Pizza Order'           # Button text
+              title: 'Start pizza order processing' # Button help text
+              class: 'btn btn-default'              # Button container class
+              fa_class: 'fas fa-user'               # Button icon class
+              bp_code: 'pizza_order'                # Business process code
+          new_customer:
+            - name: 'New Customer'
+              title: 'Start Creating Customer'
+              class: 'btn btn-primary'
+              fa_class: 'fa fa-user'
+              bp_code: 'new_customer'
+          relocate_customer:
+            - name: 'Relocate Customer'
+              title: 'Start Relocating Customer'
+              class: 'btn btn-default'
+              fa_class: 'fa fa-suitcase-rolling'
+              bp_code: 'relocate_customer'
+
+    billing_customer:
+      entity_code_key: billingCustomerId
+      bp_name_key: billingProcessName
+
+      task_list:
+        entity_url: /customers/%s?task_id=%s
+        entity_url_params:
+          - billingCustomerId
+          - id
+
+      bp_toolbar:
+        common_buttons: []
+        entity_type_buttons:
+          operator:
+            - name: 'New Customer'
+              title: 'Start Creating Customer'
+              class: 'btn btn-success'
+              fa_class: 'fa fa-user'
+              bp_code: 'new_customer'
+          SUBJ_TYPE_Person:
+            - name: 'Relocate Customer'
+              title: 'Start Relocating Customer'
+              class: 'btn btn-default'
+              fa_class: 'fas fa-suitcase-rolling'
+              bp_code: 'relocate_customer'
+
+    crm_account:
+      entity_code_key: crmAccountId
+      bp_name_key: crmProcessName
+
+      task_list:
+        entity_url: /accounts/%s?task_id=%s
+        entity_url_params:
+          - crmAccountId
+          - id
+
+      bp_toolbar:
+        common_buttons: []
+        entity_type_buttons: {}
+
+  use_bpm_stub: false
+
+  minio:
+    endpoint: 'http://127.0.0.1:9000'
+    access_key_id: <%= ENV['MINIO_ACCESS_KEY'] %>
+    secret_access_key: <%= ENV['MINIO_SECRET_KEY'] %>
+    bucket: <%= ENV['MINIO_BUCKET_NAME'] %>
+    region: 'us-east-1'
+
+  allowed_request_origins:
+    - http://*
+    - https://*

@@ -1,0 +1,43 @@
+version: '2'
+services:
+  db_homs:
+    image: postgres:11.0
+    hostname: postgres-homs
+    container_name: postgres-homs
+    environment:
+      PGDATA: $HOMS_DB_PATH/homs
+      POSTGRES_DB: $HOMS_DB_NAME
+      POSTGRES_USER: $HOMS_DB_USER
+      POSTGRES_PASSWORD: $HOMS_DB_PASSWORD
+      TZ: UTC
+    ports:
+      - $HOMS_DB_PORT:5432
+    networks:
+      - custom_network
+  homs:
+    image: latera/homs_testing
+    container_name: homs_testing
+    env_file:
+      - ".env"
+    links:
+      - db_homs:$HOMS_DB_HOST
+    environment:
+      GENERATE_DOC: $GENERATE_DOC
+      SIMPLE_COV_ENABLED: $SIMPLE_COV_ENABLED
+      SEED_DB: $HOMS_DB_SEED
+    depends_on:
+      - db_homs
+      - memcached
+    ports:
+      - $HOMS_PORT:3000
+    networks:
+      - custom_network
+  memcached:
+    image: memcached
+    container_name: memcached
+    hostname: memcached
+    networks:
+      - custom_network
+networks:
+  custom_network:
+    driver: bridge

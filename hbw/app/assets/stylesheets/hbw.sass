@@ -1,0 +1,499 @@
+// Here all styles used by BPM widget
+
+@import url("https://use.fontawesome.com/releases/v5.7.1/css/solid.css")
+@import url("https://use.fontawesome.com/releases/v5.7.1/css/regular.css")
+@import url("https://use.fontawesome.com/releases/v5.7.1/css/fontawesome.css")
+
+@import 'jquery.growl'
+@import 'hbw/variables'
+@import 'hbw/brand_variables'
+
+.hbw-styles
+  @import 'bootstrap'
+  @import 'bootswatch/flatly/bootswatch'
+  @import 'bootstrap-datetimepicker'
+
+  @import 'tooltip'
+
+  @import 'hbw/branding'
+
+  .growl-message
+    max-height: 90px
+    overflow-y: scroll
+
+  .pre-scrollable
+    overflow-y: auto
+
+  .has-error
+    .table
+      margin-bottom: 0px
+
+  .tab-content
+    border-radius: 0 0 4px 4px
+    padding: 10px
+    overflow: visible
+
+  .form-group
+    width: 100%
+
+    .tooltip.right
+      z-index: 1010
+
+  .hbw-checkbox-label
+    display: table-cell
+    vertical-align: middle
+    cursor: pointer
+
+  .field_with_errors
+    @extend .has-error
+
+  // make all images responsive by default
+  img
+    @extend .img-responsive
+    margin: 0 auto
+
+  // override for the 'Home' navigation link
+  .navbar-brand
+    font-size: inherit
+
+  // THESE ARE EXAMPLES YOU CAN MODIFY
+  // create your own classes
+  // to make views framework-neutral
+  .column
+    @extend .col-md-6
+    @extend .text-center
+
+  .form
+    @extend .col-md-6
+
+  .form-centered
+    @extend .col-md-6
+    @extend .text-center
+
+  .submit
+    @extend .btn
+    @extend .btn-primary
+    @extend .btn-lg
+
+  .button-xs
+    @extend .btn
+    @extend .btn-primary
+    @extend .btn-xs
+
+  .container h2
+    margin-top: 1.2em
+    margin-bottom: .7em
+
+  h4.empty-list
+    padding-top: 1em
+
+  .control-label
+    font-weight: normal
+
+  .form-horizontal
+    .checkbox
+      padding-top: 3px
+
+    label.control-label
+      padding-right: 0
+
+  a > .fa
+    margin-right: .25em
+
+  header > nav > .container > .navbar-collapse
+    margin-left: -15px
+
+  .show-hidden-order-data
+    margin-top: .5em
+
+  .edit-order-button
+    margin-top: 1em
+
+  .clear-both
+    clear: both
+
+  .hbw-form
+    .hbw-checkbox-label
+      font-weight: normal
+      margin-top: 10px
+
+  .hbw-spinner
+    height: 45px
+    margin-bottom: 15px
+
+  .control-buttons
+    display: flex
+    flex-wrap: wrap
+
+    .btn
+      margin-right: 10px
+      margin-bottom: 10px
+
+  .btn.disabled
+    background-size: 40px 40px
+    @include gradient-striped
+    @include animation(progress-bar-stripes 2s linear infinite)
+
+  .hidden
+    visibility: hidden
+
+  .hbw-table
+    overflow-y: auto
+    display: block
+    width: 100%
+    max-height: 700px
+
+    table
+      border-top: 1px
+
+    thead th
+      position: sticky
+      top: 0
+
+    &::-webkit-scrollbar
+      width: 10px
+
+    &::-webkit-scrollbar-track
+      background: transparent
+
+  table.select-table
+    tr
+      &:hover
+        td
+          cursor: pointer
+
+    .text-align-left
+      text-align: left
+    .text-align-center
+      text-align: center
+    .text-align-right
+      text-align: right
+
+  .attacher
+    align-items: center
+    justify-content: center
+    display: flex
+    margin-top: 5px
+    border-radius: 7px
+    width: 150px
+    padding: 8px
+
+    &.activated
+      width: auto
+      max-width: 480px
+      height: 115px
+      padding-top: 13px
+
+    .drop_text
+      pointer-events: none
+      font-size: .8em
+      text-align: center
+
+  .tabs
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    white-space: nowrap
+    margin-bottom: 30px
+    a
+      display: flex
+      outline: none
+      text-decoration: none
+      padding: 14px 30px
+    ul
+      padding: 0
+      width: 100%
+
+      li
+        display: inline-block
+        margin-bottom: -1px
+
+        &.is-active
+          a
+            padding-bottom: 10px
+            font-weight: bold
+
+  .claiming-table
+    width: 100%
+
+    .no-tasks, .pending
+      text-align: center
+
+    tbody
+      tr
+        cursor: pointer
+        border-left: 3px solid transparent
+
+        &.chosen, &:hover
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+
+        .priority
+          text-align: center
+
+        .description
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+          max-width: 15vw
+
+        td
+          vertical-align: text-top !important
+          padding-top: 15px !important
+          padding-bottom: 15px !important
+
+  .deadline
+    font-weight: 500
+
+  .task-overview
+    display: flex
+    flex-direction: column
+    position: sticky
+    top: 75px
+
+    .bold
+      font-weight: bold
+
+    .header
+      margin-bottom: 15px
+      font-size: 1.2em
+
+    a
+      margin-bottom: 15px
+
+    .title
+      margin-bottom: 15px
+
+      span
+        padding-right: 7px
+
+    .two-cols
+      margin-bottom: 5px
+
+      tr
+        td
+          padding-bottom: 15px
+
+          &:first-child
+            width: 25%
+            padding-right: 20px
+
+    .description
+      margin-bottom: 20px
+
+    .buttons
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: flex-start
+      flex-basis: 100%
+
+      button
+        margin-right: 20px
+        margin-bottom: 10px
+
+  .search-input-with-controls
+    position: relative
+    float: right
+
+    input
+      width: 350px
+      height: 40px
+      padding-left: 30px
+      padding-right: 30px
+      border-radius: 3px
+
+    .icon
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      top: 0
+      height: 40px
+      width: 30px
+      font-size: .9em
+
+      &.search
+        left: 5px
+        pointer-events: none
+
+      &.cross
+        right: 5px
+        cursor: pointer
+
+  .claiming-menu-button-container
+    width: 100%
+    height: 100%
+
+    .claiming-menu-button
+      width: 100%
+      height: 100%
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+
+      .hbw-icon-svg
+        height: 40%
+
+      .claiming-count
+        position: absolute
+        padding-left: 3%
+        padding-right: 3%
+        top: 55%
+        right: 0
+        text-align: center
+        font-size: .7em
+        border-radius: 5px
+        min-width: 50%
+
+  .claimimg-popup
+    position: absolute
+    right: 0
+    width: 600px
+    box-shadow: 1px 2px 4px 0 rgba(0,0,0,0.5)
+
+    .tabs
+      margin-bottom: 0
+
+      li
+        width: 50%
+        a
+          justify-content: center
+
+    .short-list
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      flex-basis: 100%
+      padding: 0 15px
+
+      .no-tasks, .pending
+        text-align: center
+        margin-top: 1.5em
+
+      .row
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding: 10px 10px
+        cursor: pointer
+
+        i
+          padding: 3px 5px
+
+        .left, .right
+          display: flex
+          flex-grow: 1
+        .left
+          justify-content: flex-start
+          overflow: hidden
+          padding-right: 5px
+          .title, .description
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+          .description
+            flex: 1
+            padding-left: 5px
+        .right
+          flex: 0 0 auto
+          justify-content: flex-end
+          text-align: end
+          padding-right: 10px
+
+      .button
+        display: flex
+        flex-direction: row
+        justify-content: center
+        margin: 20px 0
+
+  #hbw-claiming-tasks
+    display: flex
+    flex-direction: row
+
+    .table
+      flex-direction: column
+      flex-basis: 70%
+
+    .overview
+      flex-basis: 30%
+      padding-left: 5%
+      padding-top: 170px
+
+    .title-row
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 30px
+
+      .title
+        font-size: 1.7em
+        font-weight: bold
+
+  #hbw-task-list
+    margin-top: 2em
+
+  #hbw-tasks-list-button
+    width: 50px
+    height: 60px
+
+  .hbw-body, #hbw-bp-control-buttons-container
+    .process-name
+      font-size: 1.5em
+      margin-bottom: .7em
+
+    .hbw-bp-control-buttons
+      margin-bottom: 1em
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: flex-start
+
+      .hbw-button
+        margin-right: 5px
+        margin-bottom: 5px
+
+    .hbw-error
+      .show-more
+        font-size: .8em
+
+    .collapsable
+      a
+        cursor: pointer
+      i
+        cursor: pointer
+
+    .panel
+      -webkit-box-shadow: none
+      box-shadow: none
+
+    .panel-default,
+    .panel-group
+      overflow: visible
+
+  input.hbw-checkbox
+    &[type=checkbox]
+      display: none
+
+  input.hbw-checkbox
+    &[type=checkbox]
+      + span:before
+        font-family: "Font Awesome 5 Free"
+        display: inline-block
+
+  input.hbw-checkbox
+    &[type=checkbox]:checked
+      + span:before
+        content: "\f14a"
+
+  input.hbw-checkbox
+    &[type=checkbox]
+      + span:before
+        content: "\f0c8"
+
+  .btn-group
+    .btn
+      margin-right: -1px
